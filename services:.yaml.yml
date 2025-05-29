@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wifi-voucher-checker
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python3 backend/app.py
+    plan: free
+    envVars:
+      - key: FLASK_ENV
+        value: production
